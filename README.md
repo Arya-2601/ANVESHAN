@@ -73,7 +73,22 @@ The application will launch at: **`http://localhost:5173/`**
 
 ---
 
-## 5. Demo Credentials
+## 5. Deployment (e.g., Render, Railway, Cloud VPS)
+
+The project is configured to run as a unified single Node.js web service serving both the production API and static React frontend.
+
+- **Required Node Version**: Node.js **>= 22.5.0** (required for built-in `node:sqlite` DatabaseSync)
+- **Build Command**: `npm install && npm run build`
+- **Start Command**: `npm start`
+- **Environment Variables**:
+  - `PORT`: (Optional) Port to listen on (defaults to `3000`, automatically set by Render/hosting providers)
+  - `NODE_ENV`: (Optional) `production`
+
+On server launch, the service automatically creates `data/` and `data/uploads/` storage directories if missing, initializes SQLite schema, generates initial sample FDR documents, and seeds demo records.
+
+---
+
+## 6. Demo Credentials
 
 Quick autofill helpers are embedded directly on the login screen for instant evaluation.
 
